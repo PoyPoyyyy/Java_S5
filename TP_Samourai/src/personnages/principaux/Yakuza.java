@@ -5,10 +5,10 @@ public class Yakuza extends Humain {
 	private String clan;
 	private int reputation;
 	
-	public Yakuza(String nom, int argent, String boisson, String clan, int reputation) {
+	public Yakuza(String nom, int argent, String boisson, String clan) {
 		super(nom, argent, boisson);
 		this.clan = clan;
-		this.reputation = reputation;
+		this.reputation = 0;
 	}
 	
 	public String getClan() {
@@ -22,14 +22,14 @@ public class Yakuza extends Humain {
 	public void extorquer(Commercant commercant) {
 		int argentExtorque = commercant.seFaireExtorquer();
 		this.gagnerArgent(argentExtorque);
-		this.reputation += 1;
+		this.reputation ++;
 		String message = new String();
 		message += "Je viens d'extorquer un commerçant";
 		this.parler(message);
 	}
 	
 	public void gagnerDuel() {
-		this.reputation += 1;
+		this.reputation ++;
 		String message = new String();
 		message += "J'ai gagné un duel";
 		this.parler(message);
@@ -38,7 +38,7 @@ public class Yakuza extends Humain {
 	public int perdreDuel() {
 		int argent = this.getArgent();
 		this.perdreArgent(argent);
-		this.reputation -= 1;
+		this.reputation --;
 		String message = new String();
 		message += "J'ai perdu un duel";
 		this.parler(message);
@@ -47,6 +47,10 @@ public class Yakuza extends Humain {
 	
 	@Override
 	public void direBonjour() {
-		
+	    super.direBonjour();
+	    String message = new String();
+	    message += "Je suis un yakuza du clan" + this.clan;
+	    this.parler(message);
 	}
+
 }

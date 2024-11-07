@@ -12,23 +12,18 @@ public class Humain {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(texte);
+		System.out.println(this.getClass().getSimpleName()+ "  -->  " + texte);
 	}
 	
 	public void direBonjour() {
 		String message = new String();
-		message += "Bonjour ! Je m'appelle ";
-		message += this.nom;
-		message += " et j'aime boire du ";
-		message += this.boisson;
+		message += "Bonjour ! Je m'appelle " + this.nom + " et j'aime boire du " + this.boisson;
 		this.parler(message);
 	}
 	
 	public void boire() {
 		String message = new String();
-		message += "Mmmm, un bon verre de ";
-		message += this.boisson;
-		message += " ! GLOUPS !";
+		message += "Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !";
 		this.parler(message);
 	}
 	
