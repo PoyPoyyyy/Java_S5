@@ -49,7 +49,7 @@ public class Yakuza extends Humain {
 	public void direBonjour() {
 	    super.direBonjour();
 	    String message = new String();
-	    message += "Je suis un yakuza du clan" + this.clan;
+	    message += "Je suis un yakuza du clan " + this.clan;
 	    this.parler(message);
 	}
 

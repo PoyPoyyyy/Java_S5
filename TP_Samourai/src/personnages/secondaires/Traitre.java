@@ -30,18 +30,12 @@ public class Traitre extends Samourai {
         this.parler(message);
 	}
 	
-	public void faireLeGentil(Humain humain, int argent) {;
-		this.perdreArgent(argent);
-		humain.gagnerArgent(argent);
-		String message = new String();
-		message += "Je fais ami ami";
-		this.parler(message);
-		float traitrise = argent / 10;
-		if (this.niveauTraitrise < traitrise) {
-			this.niveauTraitrise = 0;
-		}
-		else {
-			this.niveauTraitrise -= traitrise;
-		}
+	public void faireLeGentil(Humain humain, int argent) {
+	    this.perdreArgent(argent);
+	    humain.gagnerArgent(argent);
+	    System.out.println(this.getClass().getSimpleName() + " : Je fais ami-ami ");
+	    
+	    float reduction = argent / 10.0f;
+	    this.niveauTraitrise = Math.max(0, this.niveauTraitrise - (int) reduction);
 	}
 }

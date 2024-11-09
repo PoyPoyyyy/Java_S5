@@ -28,4 +28,5 @@ public class Ronins extends Humain {
 			this.honneur --;
 		}
 	}
+	
 }

@@ -27,6 +27,10 @@ public class Humain {
 		this.parler(message);
 	}
 	
+	public String getNom() {
+		return this.nom;
+	}
+	
 	public int getArgent() {
 		return this.argent;
 	}
