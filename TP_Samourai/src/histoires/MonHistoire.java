@@ -1,5 +1,6 @@
 package histoires;
 import personnages.*;
+import personnages.secondaires.*;
 import personnages.principaux.*;
 
 public class MonHistoire {
@@ -17,7 +18,14 @@ public class MonHistoire {
 	  ronin.donner(10, commercant );
 	  ronin.provoquer(yakusa);
 	  ronin.direBonjour();
+	  Colporteur colporteur = new Colporteur("Axel", 0, "Ricard");
+	  Grandmere grandmere = new Grandmere("Le B", 0,"Schweps");
+	  grandmere.faireConnaissanceAvec(colporteur);
+	  grandmere.direBonjour();
+	  Ninja ninja = new Ninja("Le M", 0, null, null);
+	  ninja.direBonjour();
+	  Traitre traite = new Traitre("Le A", null, 0, null);
+	  traite.direBonjour();
 	}
-
-
+	
 }
