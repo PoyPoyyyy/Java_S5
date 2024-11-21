@@ -57,6 +57,13 @@ public class Dresseur {
 	}
 	
 	public void capturerPokemons() {
-		
+		this.sacados.capturerPokemons();
+	}
+	
+	public boolean peutCombatre() {
+		boolean peut = true;
+		for (Pokemon pokemon : sacados) {
+			
+		}
 	}
 }
